@@ -22,12 +22,12 @@ public class Atendimento {
 	}
 
 	public String entrarNaFila(Cliente cliente) {
-		if (filaAtendimento.size() >= this.filaLimite) {
-			return "A fila está cheia.";
-		}
-		else {
+		if (filaAtendimento.size() < (this.filaLimite + 1)) {
 			filaAtendimento.add(cliente);
 			return "Cliente adicionado à lista.";
+		}
+		else {
+			return "A fila está cheia.";
 		}
 	}
 	
