@@ -22,7 +22,7 @@ public class Atendimento {
 	}
 
 	public String entrarNaFila(Cliente cliente) {
-		if (filaAtendimento.size() < (this.filaLimite + 1)) {
+		if (filaAtendimento.size() < this.filaLimite) {
 			filaAtendimento.add(cliente);
 			return "Cliente adicionado à lista.";
 		}
